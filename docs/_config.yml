@@ -18,22 +18,28 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: phexyz's blog
+email: phexyz@users.noreply.github.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Thoughts and ideas on AI, software development
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: theRealPhexyz
+github_username: phexyz
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
 
+# Posts are private by default. Add `published: true` to a post's front
+# matter to make it live. Preview locally with: jekyll serve --unpublished
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      published: false
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
